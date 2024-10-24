@@ -1,0 +1,62 @@
+[
+    {
+      "playerId": 1,
+      "name": "Virat Kohli",
+      "country": "India",
+      "image": "https://i.ibb.co.com/tL26rJp/cricket-star-virat-kohli-urrltjsrrzxgwip2.webp",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm medium",
+      "biddingPrice": 2400000
+    },
+    {
+      "playerId": 2,
+      "name": "Pat Cummins",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/7gkCmQP/gettyimages-1356306321-594x594.jpg",
+      "role": "Bowler",
+      
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": 1800000
+    },
+    {
+      "playerId": 3,
+      "name": "Ben Stokes",
+      "country": "England",
+      "image": "https://i.ibb.co.com/NV0D3m2/portrait-person-playing-cricket-sport.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm fast-medium",
+      "biddingPrice": 2000000
+    },
+    {
+      "playerId": 4,
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/2dPdSGN/gettyimages-632750366-594x594.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "None",
+      "biddingPrice": 2300000
+    },
+    {
+      "playerId": 5,
+      "name": "Kane Williamson",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/ZNtnKTd/cricket-match-with-player.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": 2100000
+    },
+    {
+      "playerId": 6,
+      "name": "Kagiso Rabada",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/SXCx8yD/gettyimages-2159434944-594x594.jpg",
+      "role": "Bowler",
+      
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": 1900000
+    }
+  ]
