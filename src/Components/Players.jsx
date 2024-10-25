@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 
-const Players = () => {
+const Players = ({handleAddChoosePlayer}) => {
     const [players, setPlayers] = useState([]);
     // const {playerId, name, country, image} = players;
 
@@ -40,7 +40,7 @@ const Players = () => {
                       </div>
                       <div className="flex justify-between items-center text-gray-500">
                         <p>Price: ${player.biddingPrice}</p>
-                        <button className="border-2 rounded-md py-1 px-2">Close Player</button>
+                        <button onClick={()=>handleAddChoosePlayer(player)} className="border-2 rounded-md py-1 px-2">Choose Player</button>
                       </div>
                     </div>
                   </div>)
