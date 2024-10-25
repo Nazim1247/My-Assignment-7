@@ -10,26 +10,27 @@ const App = () => {
   const [coin, setCoin] = useState(0);
   const [choosePlayer, setChoosePlayer] = useState([]);
 
+
   const handleRemove = (name)=>{
-    const removePlayer = choosePlayer.filter(p => p.name !== name)
-    setChoosePlayer(removePlayer)
+    const removePlayer = choosePlayer.filter(p => p.name !== name);
+    setChoosePlayer(removePlayer);
   }
 
   const handleAddChoosePlayer = (player)=>{
     const isExist = choosePlayer.find(p => p.playerId === player.playerId);
-    if(!isExist){
+    if(isExist || !coin){
+      alert('already selected')
+    }else{
       const newPlayer = [...choosePlayer, player];
     setChoosePlayer(newPlayer);
-    }else{
-      alert('already selected')
     }
   }
+  
 
-  
-  
 
   const handleAddCoin = ()=>{
     setCoin(coin + 5000000)
+    
   }
 
 
