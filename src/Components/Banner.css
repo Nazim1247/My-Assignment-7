@@ -6,3 +6,12 @@
     padding-top: 40px;
     background-color: black;
 }
+
+.news-later{
+    background-image: url('../assets/image/bg-shadow.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    
+   
+}

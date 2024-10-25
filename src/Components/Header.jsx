@@ -1,6 +1,6 @@
 
 import logo from '../assets/image/logo.png'
-const Header = () => {
+const Header = ({coin}) => {
     return (
         <div className='w-11/12 mx-auto flex justify-between items-center py-8'>
             <div>
@@ -14,7 +14,7 @@ const Header = () => {
                 <p>Schedules</p>
                 </div>
                 <div className='flex items-center gap-2 border-2 rounded-md py-1 px-2'>
-                    <p>0 Coin</p>
+                    <p>{coin} Coin</p>
                     <i className="fa-solid fa-circle-dollar-to-slot text-orange-400"></i>
                 </div>
             </div>
