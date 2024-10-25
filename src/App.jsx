@@ -18,15 +18,18 @@ const App = () => {
 
   const handleAddChoosePlayer = (player)=>{
     const isExist = choosePlayer.find(p => p.playerId === player.playerId);
-    if(isExist || !coin){
+    if(isExist || coin < player.biddingPrice){
       alert('already selected')
     }else{
       const newPlayer = [...choosePlayer, player];
     setChoosePlayer(newPlayer);
+    handleRemoveCoin(player.biddingPrice)
     }
   }
   
-
+  const handleRemoveCoin = (price)=>{
+    setCoin(coin - price)
+  }
 
   const handleAddCoin = ()=>{
     setCoin(coin + 5000000)
