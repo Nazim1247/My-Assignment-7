@@ -10,6 +10,11 @@ const App = () => {
   const [coin, setCoin] = useState(0);
   const [choosePlayer, setChoosePlayer] = useState([]);
 
+  const handleRemove = (name)=>{
+    const removePlayer = choosePlayer.filter(p => p.name !== name)
+    setChoosePlayer(removePlayer)
+  }
+
   const handleAddChoosePlayer = (player)=>{
     const isExist = choosePlayer.find(p => p.playerId === player.playerId);
     if(!isExist){
@@ -18,10 +23,9 @@ const App = () => {
     }else{
       alert('already selected')
     }
-    
   }
 
-  console.log(choosePlayer)
+  
   
 
   const handleAddCoin = ()=>{
@@ -34,7 +38,7 @@ const App = () => {
     <div className="max-w-[1250px]">
       <Header coin={coin}></Header>
       <Banner handleAddCoin={handleAddCoin}></Banner>
-      <Available choosePlayer={choosePlayer}></Available>
+      <Available handleRemove={handleRemove} choosePlayer={choosePlayer}></Available>
       <Players handleAddChoosePlayer={handleAddChoosePlayer}></Players>
       
       <NewsLater></NewsLater>

@@ -1,6 +1,6 @@
 
 
-const Player = ({choosePlayer}) => {
+const Player = ({choosePlayer, handleRemove}) => {
     return (
         <div className="">
             {
@@ -11,6 +11,7 @@ const Player = ({choosePlayer}) => {
                     <h3 className="font-bold">{p.name}</h3>
                     <p>{p.role}</p>
                     </div>
+                    <button onClick={()=>handleRemove(p.name)}>delete</button>
                 </div>)
             }
         </div>
