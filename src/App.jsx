@@ -3,7 +3,6 @@ import Available from "./Components/Available";
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import NewsLater from "./Components/NewsLater";
 import Players from "./Components/Players";
 import Player from "./Components/Player";
 
@@ -12,20 +11,35 @@ import Player from "./Components/Player";
 const App = () => {
   const [coin, setCoin] = useState(0);
   const [choosePlayer, setChoosePlayer] = useState([]);
-
   const [active, setActive] = useState('available');
+  const [isActive, setIsActive] = useState({
+    card: true,
+    status: 'active'
+  });
 
-  const handleAvailable = ()=>{
-    console.log('added')
-    setActive('available')
+  const handleAvailable = (status)=>{
+    if(status === 'card'){
+      setIsActive({
+        card: true,
+        status: 'active'
+      })
+    }
+    else{
+      setIsActive({
+        card: false,
+        status: 'about'
+      })
+    }
   }
-
-  const handleSelected = ()=>{
-    console.log('selected')
-    setActive(active)
+ 
+  const addActive = (p)=>{
+    if(p === 'available'){
+      setActive(p)
+    }else{
+      setActive('selected')
+    }
+    
   }
-  
-
 
   const handleRemove = (name)=>{
     const removePlayer = choosePlayer.filter(p => p.name !== name);
@@ -51,18 +65,17 @@ const App = () => {
     setCoin(coin + 5000000)
   }
 
+  
 
   return (
     <div className="max-w-[1250px]">
       <Header coin={coin}></Header>
       <Banner handleAddCoin={handleAddCoin}></Banner>
-      <Available handleSelected={handleSelected} active={active} handleAvailable={handleAvailable} handleRemove={handleRemove} choosePlayer={choosePlayer}></Available>
-      <Players handleAddChoosePlayer={handleAddChoosePlayer}></Players>
+      <Available addActive={addActive} isActive={isActive} handleAvailable={handleAvailable} handleRemove={handleRemove} choosePlayer={choosePlayer}></Available>
+      
 
-      {/* {active?<Players></Players>:<Player></Player>} */}
-
-      <Player handleRemove={handleRemove} choosePlayer={choosePlayer}></Player>
-      {/* <NewsLater></NewsLater> */}
+      {isActive.card?<Players handleAddChoosePlayer={handleAddChoosePlayer}></Players>:<Player handleRemove={handleRemove} choosePlayer={choosePlayer}></Player>}
+      
       <Footer></Footer>
     </div>
   );

@@ -18,3 +18,13 @@
     background-color: white;
    
 }
+
+.active{
+    background-color: #E7FE29;
+    color: white;
+}
+
+.btn{
+    padding: 15px;
+    cursor: pointer;
+}

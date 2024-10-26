@@ -1,8 +1,13 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Project Name.
+## The Beautiful cricket tournament
+# A brief description.
+#### Cricket is a very popular game, many people like to play cricket, here are the names of some top level cricket players, some of them are all-rounders, some of them are batting, and some of them are bowler. so welcome to my little cricket tournament everyone, thanks for sticking around.
+# Technologies used.
+- Component-based Architecture:
+- Virtual DOM:
+- JSX: (JavaScript XML)
+- Declarative UI:
+# 3 key features of My project.
+- It's a veri beautiful project
+- React technology is used in this project.
+- This project is completely dynamic

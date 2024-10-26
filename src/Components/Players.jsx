@@ -35,8 +35,8 @@ const Players = ({handleAddChoosePlayer}) => {
                       <hr />
                       <h3 className="font-bold">Ratting</h3>
                       <div className="flex justify-between items-center text-gray-500">
+                        <p>Left-Handed-Bat</p>
                         <p>{player.battingType? `${player.battingType}`:`${player.bowlingType}`}</p>
-                        {/* <p>Left Handed Batting</p> */}
                       </div>
                       <div className="flex justify-between items-center text-gray-500">
                         <p>Price: ${player.biddingPrice}</p>
