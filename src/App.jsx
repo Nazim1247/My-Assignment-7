@@ -6,8 +6,6 @@ import Header from "./Components/Header";
 import Players from "./Components/Players";
 import Player from "./Components/Player";
 
-
-
 const App = () => {
   const [coin, setCoin] = useState(0);
   const [choosePlayer, setChoosePlayer] = useState([]);
@@ -33,6 +31,7 @@ const App = () => {
   }
  
   const addActive = (p)=>{
+    console.log(active)
     if(p === 'available'){
       setActive(p)
     }else{
@@ -65,14 +64,11 @@ const App = () => {
     setCoin(coin + 5000000)
   }
 
-  
-
   return (
     <div className="max-w-[1250px]">
       <Header coin={coin}></Header>
       <Banner handleAddCoin={handleAddCoin}></Banner>
       <Available addActive={addActive} isActive={isActive} handleAvailable={handleAvailable} handleRemove={handleRemove} choosePlayer={choosePlayer}></Available>
-      
 
       {isActive.card?<Players handleAddChoosePlayer={handleAddChoosePlayer}></Players>:<Player handleRemove={handleRemove} choosePlayer={choosePlayer}></Player>}
       

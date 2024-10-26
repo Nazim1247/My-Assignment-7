@@ -1,5 +1,4 @@
-
-
+/* eslint-disable react/prop-types */
 
 const Player = ({choosePlayer, handleRemove}) => {
     return (

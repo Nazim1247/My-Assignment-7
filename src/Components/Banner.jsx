@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import './Banner.css'
 import banner from '../assets/image/banner-main.png'
