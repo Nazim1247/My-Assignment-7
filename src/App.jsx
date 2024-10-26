@@ -5,10 +5,26 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import NewsLater from "./Components/NewsLater";
 import Players from "./Components/Players";
+import Player from "./Components/Player";
+
+
 
 const App = () => {
   const [coin, setCoin] = useState(0);
   const [choosePlayer, setChoosePlayer] = useState([]);
+
+  const [active, setActive] = useState('available');
+
+  const handleAvailable = ()=>{
+    console.log('added')
+    setActive('available')
+  }
+
+  const handleSelected = ()=>{
+    console.log('selected')
+    setActive(active)
+  }
+  
 
 
   const handleRemove = (name)=>{
@@ -33,19 +49,20 @@ const App = () => {
 
   const handleAddCoin = ()=>{
     setCoin(coin + 5000000)
-    
   }
-
 
 
   return (
     <div className="max-w-[1250px]">
       <Header coin={coin}></Header>
       <Banner handleAddCoin={handleAddCoin}></Banner>
-      <Available handleRemove={handleRemove} choosePlayer={choosePlayer}></Available>
+      <Available handleSelected={handleSelected} active={active} handleAvailable={handleAvailable} handleRemove={handleRemove} choosePlayer={choosePlayer}></Available>
       <Players handleAddChoosePlayer={handleAddChoosePlayer}></Players>
-      
-      <NewsLater></NewsLater>
+
+      {/* {active?<Players></Players>:<Player></Player>} */}
+
+      <Player handleRemove={handleRemove} choosePlayer={choosePlayer}></Player>
+      {/* <NewsLater></NewsLater> */}
       <Footer></Footer>
     </div>
   );
